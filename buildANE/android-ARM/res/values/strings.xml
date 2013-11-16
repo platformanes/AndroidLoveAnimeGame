@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="confirm_title">提示</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="content_description_icon">icon</string>
+    <string name="refresh">刷新</string>
+    <string name="processing">加载中</string>
+    <string name="download">下载</string>
+    <string name="download_fail">下载安装包失败</string>
+    <string name="cancel_install_msp">你已取消安装移动快捷支付服务</string>
+    <string name="cancel_install_alipay">你已取消安装支付宝钱包</string>
+    <string name="redo">重试</string>
+    <string name="install_msp">你尚未安装支付宝移动快捷支付服务，请立即安装</string>
+    <string name="install_alipay">你尚未安装支付宝钱包，请立即安装</string>
+    <string name="choise">请选择支付方式</string>
+    <string name="wap">wap支付</string>
+    <string name="sms">短信支付</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="phone">客服电话：4008867686</string>
+    <string name="ok">确认</string>
+    <string name="cancle">取消</string>
+    <string name="cancle1">茄子炒肉</string>
+    <string name="cancle2">1</string>
+    <string name="cancle3">价格:25</string>
+    <string name="choise_msg1">这四句字符串</string>
+    <string name="choise_msg2">自定义有其他用处</string>
+    <string name="choise_msg3">应该是选择商品的时候提示</string>
+    <string name="choise_msg4">请自行修改此描述[此温馨提示来自 Rect]</string>
+    <string name="ok_msg1">尊敬的用户,您将花费</string>
+    <string name="ok_msg2">元,用于购买</string>
+    <string name="ok_msg3">点击确认购买撒.</string>
+    <string name="ok_msg4">请自行修改此描述[此温馨提示来自 Rect]</string>
+
+</resources>
