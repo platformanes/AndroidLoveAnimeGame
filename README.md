@@ -1,4 +1,4 @@
 AndroidLoveAnimeGame
 ====================
 
-电信爱漫画平台android版ANE
+电信爱动漫平台android版ANE
