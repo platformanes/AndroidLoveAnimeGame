@@ -1,4 +1,4 @@
-AndroidLoveAnimeGame
+﻿AndroidLoveAnimeGame
 ===============
 
 电信爱动漫平台android版ANE
@@ -20,6 +20,8 @@ AndroidLoveAnimeGame
 > A.参照 `AndroidLoveAnimeGame\buildAPK\anime.bat`中的命令 其中adt路径修改为你的本地路径
 >  
 > B.注意配置`-app.xml` 这步非常容易出错
+>
+> C.over
 
 ## 作者
 
