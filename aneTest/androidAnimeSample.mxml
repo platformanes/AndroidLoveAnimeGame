@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   width="462" applicationComplete="handler_appComp(event)">
+	<fx:Style source="androidQH360Sample.css"/>
+	<fx:Script>
+		<![CDATA[
+			import com.anime.ane.AnimeExtension;
+			
+			import mx.events.FlexEvent;
+			import mx.utils.ObjectUtil;
+			
+			private var isLang:Boolean = false;
+			private function handler_status($evt:StatusEvent):void
+			{
+				showInfo('------------------');
+				showInfo('handler_status');
+				showInfo('level:='+ $evt.level+ ',code:='+ $evt.code);
+				showInfo('------------------');
+			}
+			
+			protected function handler_appComp($evt:FlexEvent):void 
+			{
+				AnimeExtension.getInstance().addEventListener(StatusEvent.STATUS,handler_status);
+			}
+			
+			protected function handler_getStorageBTNclick($evt:MouseEvent):void
+			{
+				clearInfo();
+				showInfo('===================='); 
+			}
+			
+			
+			protected function handler_getSystemInfoBTNclick($evt:MouseEvent):void
+			{
+				clearInfo();
+				
+			}
+			
+			protected function handler_getPackageInfoBTNclick($evt:MouseEvent):void
+			{
+				showInfo('====================');
+				
+			}
+			
+			
+			private function showInfo(...$args):void
+			{
+				var __info:String = '';
+				for (var i:int = 0; i < $args.length; i++) 
+				{
+					__info += $args[i] + File.lineEnding;
+				}
+				infoTA.appendText(__info);
+			}
+			
+			
+			
+			private function clearInfo():void
+			{
+				infoTA.text = '';
+			}
+			
+			
+			protected function sdk_handle(event:MouseEvent):void
+			{
+				var b:Button = event.currentTarget as Button;
+				switch(b.id)
+				{
+					
+					case "inits":
+						AnimeExtension.getInstance().AnimeInit("dm_open_test","02d5efced14e2bf6ef24045df1cfd495");
+						break;
+					
+					case "order":
+						AnimeExtension.getInstance().AnimeOrdersn(0);
+						break;
+					
+					case "payA":
+						AnimeExtension.getInstance().AnimePay("茄子炒肉(好想吃谁请我吃...orz)","10001","0.1",1,"附加条件:肉放多点");
+						break;
+					
+					
+					case "exits":
+						AnimeExtension.getInstance().AnimeExit(0);
+						exit();
+						break;
+					
+				}
+			}
+			
+			
+			
+			private function exit():void
+			{
+				NativeApplication.nativeApplication.exit();   
+			}
+			
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<s:states>
+		<s:State name="fun1State"/>
+	</s:states>
+	<s:HGroup width="100%" horizontalAlign="center">
+		<s:Label id="qh360" width="406" height="70" color="#6A13ED" fontFamily="Arial" fontWeight="bold"
+				 text="ANIME ANE(by Rect)rectvv@gmail.com" textAlign="center" verticalAlign="middle"/>
+	</s:HGroup>
+	
+	<s:TileGroup includeIn="fun1State" width="100%" height="273">
+		<s:Button id="inits" y="12" width="225" height="27" label="初始化" click="sdk_handle(event)"
+				  fontFamily="_serif" fontSize="18" fontStyle="normal" fontWeight="bold"/>
+		<s:Button id="order" y="12" width="225" height="27" label="查询" click="sdk_handle(event)"
+				  fontFamily="_serif" fontSize="18" fontStyle="normal" fontWeight="bold"/>
+		<s:Button id="payA" label="支付"  fontSize="18" click="sdk_handle(event)"/>
+		<s:Button id="exits" label="退 出" fontSize="18" click="sdk_handle(event)"/>
+		
+	</s:TileGroup>	
+	
+	<s:VGroup width="100%" height="436" horizontalAlign="right">
+		<s:TextArea id="infoTA" width="100%" height="420" color="#030715" textAlign="left" fontSize="18"/>
+		<s:HGroup>
+		</s:HGroup>
+	</s:VGroup>
+</s:Application>
