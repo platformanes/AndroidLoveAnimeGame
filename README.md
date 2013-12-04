@@ -17,6 +17,7 @@
 		ANE编写到此结束.下面打包APK才是重中之重
 
 ## 打包APK过程
+
 > A.参照 `AndroidLoveAnimeGame\buildAPK\anime.bat`中的命令 其中adt路径修改为你的本地路径
 >  
 > B.注意配置`-app.xml` 这步非常容易出错
